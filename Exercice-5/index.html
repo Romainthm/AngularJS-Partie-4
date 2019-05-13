@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="voiture">
+  <head>
+    <meta charset="utf-8">
+    <title>Exercice 4</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body ng-controller="Cntrl">
+    <button type="button" name="button" ng-click="show=true">Affiché</button>
+    <button type="button" name="button" ng-click="show=false">Caché</button>
+    <table cellspacing="2px" cellpadding="2px;" ng-show="show" rules="all" style="border:solid 1px black;">
+      <thead>
+        <th>Marque</th>
+        <th>Couleur</th>
+      </thead>
+      <tr ng-repeat="voiture in voitures">
+        <td>
+          {{voiture.marque}}
+
+
+        </td>
+        <td>
+          {{voiture.couleur}}
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
